@@ -1,0 +1,11 @@
+pluginManagement {
+    repositories {
+        maven { url 'https://teamcity.jetbrains.com/guestAuth/app/rest/builds/buildType:(id:Kotlin_KotlinPublic_Compiler),number:1.4.0-dev-1150,branch:(default:any)/artifacts/content/maven' }
+
+        mavenCentral()
+
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+}
+rootProject.name = 'contracts-verification-task'
+
