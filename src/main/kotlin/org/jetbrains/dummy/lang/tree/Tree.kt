@@ -98,6 +98,19 @@ class VariableDeclaration(
     }
 }
 
+class ReturnStatement(
+    override val line: Int,
+    val result: Expression?
+) : Statement() {
+    override fun <R, D> accept(visitor: DummyLangVisitor<R, D>, data: D): R {
+        return visitor.visitReturnStatement(this, data)
+    }
+
+    override fun <D> acceptChildren(visitor: DummyLangVisitor<*, D>, data: D) {
+        result?.accept(visitor, data)
+    }
+}
+
 // --------------- Expressions ---------------
 
 sealed class Expression : Statement()

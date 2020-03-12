@@ -50,6 +50,16 @@ public interface DummyLanguageListener extends ParseTreeListener {
 	 */
 	void exitStat(DummyLanguageParser.StatContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link DummyLanguageParser#return_statement}.
+	 * @param ctx the parse tree
+	 */
+	void enterReturn_statement(DummyLanguageParser.Return_statementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link DummyLanguageParser#return_statement}.
+	 * @param ctx the parse tree
+	 */
+	void exitReturn_statement(DummyLanguageParser.Return_statementContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link DummyLanguageParser#if_statement}.
 	 * @param ctx the parse tree
 	 */

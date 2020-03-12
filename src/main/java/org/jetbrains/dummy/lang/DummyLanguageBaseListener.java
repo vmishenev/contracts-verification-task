@@ -66,6 +66,18 @@ public class DummyLanguageBaseListener implements DummyLanguageListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterReturn_statement(DummyLanguageParser.Return_statementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitReturn_statement(DummyLanguageParser.Return_statementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterIf_statement(DummyLanguageParser.If_statementContext ctx) { }
 	/**
 	 * {@inheritDoc}

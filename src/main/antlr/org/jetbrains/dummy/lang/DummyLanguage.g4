@@ -25,6 +25,11 @@ stat
     | assign
     | expr SEMICOLON
     | if_statement
+    | return_statement
+    ;
+
+return_statement
+    : RETURN expr? SEMICOLON
     ;
 
 if_statement
@@ -131,4 +136,8 @@ ASSIGN
 
 COMMA
     : ','
-;
+    ;
+
+RETURN
+    : 'return'
+    ;

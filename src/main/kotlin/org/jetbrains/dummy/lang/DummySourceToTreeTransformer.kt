@@ -43,14 +43,23 @@ class DummySourceToTreeTransformer {
         val assignContext: AssignContext? = assign()
         val exprContext: ExprContext? = expr()
         val ifStatementContext: If_statementContext? = if_statement()
+        val returnStatementContext: Return_statementContext? = return_statement()
 
         return when {
             varDefContext != null -> varDefContext.transform()
             assignContext != null -> assignContext.transform()
             exprContext != null -> exprContext.transform()
             ifStatementContext != null -> ifStatementContext.transform()
+            returnStatementContext != null -> returnStatementContext.transform()
             else -> throw IllegalStateException()
         }
+    }
+
+    private fun Return_statementContext.transform(): ReturnStatement {
+        return ReturnStatement(
+            line,
+            result = expr()?.transform()
+        )
     }
 
     private fun Var_defContext.transform(): VariableDeclaration {

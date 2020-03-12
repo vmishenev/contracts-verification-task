@@ -31,6 +31,10 @@ abstract class DummyLangVisitor<out R, in D> {
         return visitStatement(variableDeclaration, data)
     }
 
+    open fun visitReturnStatement(returnStatement: ReturnStatement, data: D): R {
+        return visitStatement(returnStatement, data)
+    }
+
     open fun visitExpression(expression: Expression, data: D): R {
         return visitStatement(expression, data)
     }
