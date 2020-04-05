@@ -1,0 +1,4 @@
+fun test() {
+    var x;
+    x = x;
+}

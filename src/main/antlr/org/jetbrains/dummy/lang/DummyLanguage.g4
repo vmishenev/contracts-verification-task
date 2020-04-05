@@ -93,6 +93,10 @@ FUN
     : 'fun'
     ;
 
+RETURN
+    : 'return'
+    ;
+
 ID
     : ('_'|[a-z])('_'|[a-z0-9])*
     ;
@@ -136,8 +140,4 @@ ASSIGN
 
 COMMA
     : ','
-    ;
-
-RETURN
-    : 'return'
     ;

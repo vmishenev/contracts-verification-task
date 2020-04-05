@@ -1,0 +1,6 @@
+fun test(z, y, c) {
+    var x = y;
+    var b = z;
+
+    return c;
+}

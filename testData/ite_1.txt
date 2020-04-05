@@ -1,0 +1,2 @@
+ERROR: line 20: Variable 'b' is accessed before initialization
+ERROR: line 32: Variable 'b' is accessed before initialization
